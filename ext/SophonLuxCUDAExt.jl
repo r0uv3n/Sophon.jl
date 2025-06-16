@@ -1,6 +1,6 @@
 module SophonLuxCUDAExt
 
-using Lux, LuxCUDA, Sophon, Optimization, Adapt
+using Lux, MLDataDevices,  Sophon, Optimization, Adapt
 
 function (:CUDADevice)(prob::OptimizationProblem)
     u0 = adapt(CuArray, prob.u0)
